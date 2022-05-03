@@ -21,6 +21,9 @@ tidy:
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
+main: main.cpp Matrix.cpp
+	clang++ Matrix.cpp main.cpp -o main
+
 
 clean:
 	rm -f *.o demo test
